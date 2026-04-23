@@ -1,0 +1,5 @@
+name: Clutches
+version: 1.0.0
+main: net.gravijet.clutches.Main
+author: gravijet
+description: Clutches plugin

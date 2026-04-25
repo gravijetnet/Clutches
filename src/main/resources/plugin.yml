@@ -3,3 +3,7 @@ version: 1.0.0
 main: net.gravijet.clutches.Main
 author: gravijet
 description: Clutches plugin
+commands:
+  clutch:
+    description: Gives the Condensator item if lost.
+    usage: /clutch give

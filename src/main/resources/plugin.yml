@@ -1,9 +1,13 @@
 name: Clutches
 version: 1.0.0
-main: net.gravijet.clutches.Main
+main: net.gravijet.clutches.Clutches
 author: gravijet
-description: Clutches plugin
+description: Clutch-Training mit eigenem Knockback, Level, Coins, Cosmetics und Bestenlisten.
 commands:
   clutch:
-    description: Gives the Condensator item if lost.
-    usage: /clutch give
+    description: Hauptmenü, Knockback, Einstellungen, Statistik, Bestenliste und Admin-Befehle.
+    usage: /clutch [menu|lobby|settings|cosmetics|stats|top|setspawn|setclutch|givecoins|reload]
+permissions:
+  clutches.admin:
+    description: Arena setzen, Coins vergeben und neu laden.
+    default: op

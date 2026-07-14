@@ -25,7 +25,17 @@ jobs:
         cache: maven
 
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: |
+        # Retries because Maven Central occasionally returns transient 403s
+        # to GitHub-hosted runner IPs while resolving plugin artifacts.
+        for attempt in 1 2 3; do
+          if mvn -B package --file pom.xml; then
+            exit 0
+          fi
+          echo "Maven build failed (attempt $attempt/3), retrying in 15s..."
+          sleep 15
+        done
+        exit 1
 
     - name: Prepare JAR
       run: |

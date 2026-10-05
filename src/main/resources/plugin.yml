@@ -2,12 +2,12 @@ name: Clutches
 version: 1.0.0
 main: net.gravijet.clutches.Clutches
 author: gravijet
-description: Clutch-Training mit eigenem Knockback, Level, Coins, Cosmetics und Bestenlisten.
+description: Clutch training with custom knockback, levels, coins, cosmetics and leaderboards.
 commands:
   clutch:
-    description: Hauptmenü, Knockback, Einstellungen, Statistik, Bestenliste und Admin-Befehle.
+    description: Menu, knockback, settings, statistics, leaderboards and administration commands.
     usage: /clutch [menu|lobby|settings|cosmetics|stats|top|setspawn|setclutch|givecoins|reload]
 permissions:
   clutches.admin:
-    description: Arena setzen, Coins vergeben und neu laden.
+    description: Set the arena, grant coins and reload configuration.
     default: op
